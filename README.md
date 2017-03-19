@@ -30,23 +30,23 @@ Screenshots
 
 Widget appearance
 
-![Widget appearance](./screenshots/screen1.png)<!-- .element height="20px" width="100px" -->
+<img alt="Widget appearance" src="./screenshots/screen1.png" width="35%">
 
 Widget configuration
 
-![Widget configuration](./screenshots/screen2.png)
+<img alt="Widget configuration" src="./screenshots/screen2.png" width="35%">
 
 Show empty categories
 
-![Show empty categories](./screenshots/screen3.png)
+<img alt="Show empty categories" src="./screenshots/screen3.png" width="35%">
 
 Autoverflow padding
 
-![Autoverflow padding](./screenshots/screen4.png)
+<img alt="Autoverflow padding" src="./screenshots/screen4.png" width="35%">
 
 With category icons
 
-![With category icons](./screenshots/screen5.png)
+<img alt="With category icons" src="./screenshots/screen5.png" width="35%">
 
 
 License
