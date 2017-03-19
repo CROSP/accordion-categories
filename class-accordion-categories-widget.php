@@ -80,8 +80,6 @@ class Accordion_Categories_Widget extends WP_Widget
         $this->parse_instance($instance);
         wp_register_style('accordion-category-style', plugins_url('css/accordion-category-style.css', __FILE__));
         wp_enqueue_style('accordion-category-style');
-        wp_enqueue_style('accordion-category-fonts', plugins_url('js/accordion-categories.js', __FILE__));
-        wp_enqueue_style('accordion-category-fonts');
         // Register the script like this for a plugin:
         wp_enqueue_script('jquery');
         wp_register_script('accordion-category-script', plugins_url('js/accordion-categories.js', __FILE__));
