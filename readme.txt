@@ -2,7 +2,7 @@
 Contributors: crosp
 Author: Alexander Molochko
 Donate link: https://crosp.net/
-Tags: category, categories, accordion, drop-down, menu, widget, categories tree, categories hierarchy, category widget, sidebar
+Tags: category, categories, responsive, accordion, drop-down, menu, widget, categories tree, categories hierarchy, category widget, sidebar
 Requires at least: 3.2
 Tested up to: 4.7.3
 Stable tag: 1.0
