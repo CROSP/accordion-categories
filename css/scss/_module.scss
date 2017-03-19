@@ -1,0 +1,163 @@
+
+.is-root {
+
+}
+
+.has-children {
+
+}
+
+.is-opened {
+
+}
+
+$main-color: $color-secondary;
+
+$transition-duration: all 0.5s;
+.accordion-menu-widget {
+  width: 100%;
+  // background: $color-primary;
+}
+
+.accordion-list {
+  $list-module-name: #{&};
+  position: relative;
+  display: none;
+  width: 100%;
+  &.is-root {
+    padding-left: 0;
+    display: block;
+  }
+  &.is-opened {
+    display: block;
+  }
+  /* Item submodule */
+  &-item {
+    $item-module-name: #{&};
+    width: 100%;
+    display: block;
+    &__icon {
+      $font-size: font-size-to-root-proportion(18);
+      font-size: to-em($font-size);
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: px-to-em-coeff(5px, $font-size);
+      text-indent: 0;
+    }
+
+    &__toggle-icon {
+      $icon-size : 18px;
+      height: px-to-em($icon-size);
+      width: px-to-em($icon-size);
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &__link {
+      text-indent: 0;
+      margin-left: px-to-em(7px);
+      display: inline-block;
+      white-space: initial;
+      word-break: normal;
+
+      vertical-align: middle;
+      color: $color-text--gray;
+      &:visited,
+      &:link {
+        color: $color-text--gray;
+      }
+      @include respond-to-greater-than(widescreens) {
+        word-break: normal;
+      }
+    }
+    &__post-count {
+      text-indent: 0;
+      $font-size: font-size-to-root-proportion(13);
+      font-size: to-em($font-size);
+      position: absolute;
+      display: inline-block;
+      right: 0;
+      color: $color-text--gray;
+      padding: 0 px-to-em-coeff(8px, $font-size);
+      margin-right: px-to-em-coeff(8px, $font-size);
+      @include border($main-color);
+      @include rounded-corners(10px);
+      @include transition-properties($transition-duration);
+    }
+    &__controls {
+      padding: px-to-em(10px) px-to-em(20px) px-to-em(5px) px-to-em(10px);
+      position: relative;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+      color: $color-text--gray;
+      &:hover {
+        #{$item-module-name}__link {
+          color: $main-color;
+        }
+        #{$item-module-name}__post-count {
+          color: $color-text--white;
+          background-color: $main-color;
+        }
+        &::after {
+          border-color: $main-color;
+        }
+        color: $main-color;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-bottom: 1px solid transparent;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        @include transition-properties($transition-duration);
+      }
+    }
+    /* States */
+    &.is-active {
+      > #{$item-module-name}__controls::after {
+        border-color: $main-color;
+      }
+    }
+    &.has-children {
+      > #{$item-module-name}__controls {
+        #{$item-module-name}__toggle-icon {
+          background-image: url('images/arrow-right.png');
+          background-image: url('images/arrow-right.svg');
+        }
+        &.is-opened {
+          #{$item-module-name}__toggle-icon {
+            background-image: url('images/arrow-down.png');
+            background-image: url('images/arrow-down.svg');
+          }
+        }
+      }
+    }
+  }
+
+  /* Level modifiers */
+  /*  &--level {
+      &-0 {
+        text-indent: 0;
+      }
+      &-1 {
+        text-indent: 7px;
+      }
+      &-2 {
+        text-indent: 14px;
+      }
+      &-3 {
+        text-indent: 21px;
+      }
+
+    }*/
+}

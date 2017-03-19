@@ -1,0 +1,117 @@
+.accordion-menu-widget {
+  width: 100%; }
+
+.accordion-list {
+  position: relative;
+  display: none;
+  width: 100%;
+  /* Item submodule */
+  /* Level modifiers */
+  /*  &--level {
+      &-0 {
+        text-indent: 0;
+      }
+      &-1 {
+        text-indent: 7px;
+      }
+      &-2 {
+        text-indent: 14px;
+      }
+      &-3 {
+        text-indent: 21px;
+      }
+
+    }*/ }
+  .accordion-list.is-root {
+    padding-left: 0;
+    display: block; }
+  .accordion-list.is-opened {
+    display: block; }
+  .accordion-list-item {
+    width: 100%;
+    display: block;
+    /* States */ }
+    .accordion-list-item__icon {
+      font-size: 1.125em;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 0.27778em;
+      text-indent: 0; }
+    .accordion-list-item__toggle-icon {
+      height: 1.125em;
+      width: 1.125em;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .accordion-list-item__link {
+      text-indent: 0;
+      margin-left: 0.4375em;
+      display: inline-block;
+      white-space: initial;
+      word-break: normal;
+      vertical-align: middle;
+      color: #797e83; }
+      .accordion-list-item__link:visited, .accordion-list-item__link:link {
+        color: #797e83; }
+      @media only screen and (min-width: 1200px) {
+        .accordion-list-item__link {
+          word-break: normal; } }
+    .accordion-list-item__post-count {
+      text-indent: 0;
+      font-size: 0.8125em;
+      position: absolute;
+      display: inline-block;
+      right: 0;
+      color: #797e83;
+      padding: 0 0.61538em;
+      margin-right: 0.61538em;
+      border: 1px solid #68c3a3;
+      border-radius: 10px;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+    .accordion-list-item__controls {
+      padding: 0.625em 1.25em 0.3125em 0.625em;
+      position: relative;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+      color: #797e83; }
+      .accordion-list-item__controls:hover {
+        color: #68c3a3; }
+        .accordion-list-item__controls:hover .accordion-list-item__link {
+          color: #68c3a3; }
+        .accordion-list-item__controls:hover .accordion-list-item__post-count {
+          color: #f7f7f7;
+          background-color: #68c3a3; }
+        .accordion-list-item__controls:hover::after {
+          border-color: #68c3a3; }
+      .accordion-list-item__controls::after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-bottom: 1px solid transparent;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s; }
+    .accordion-list-item.is-active > .accordion-list-item__controls::after {
+      border-color: #68c3a3; }
+    .accordion-list-item.has-children > .accordion-list-item__controls .accordion-list-item__toggle-icon {
+      background-image: url("images/arrow-right.png");
+      background-image: url("images/arrow-right.svg"); }
+    .accordion-list-item.has-children > .accordion-list-item__controls.is-opened .accordion-list-item__toggle-icon {
+      background-image: url("images/arrow-down.png");
+      background-image: url("images/arrow-down.svg"); }
+
+/*# sourceMappingURL=accordion-category-style.css.map */

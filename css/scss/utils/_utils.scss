@@ -1,0 +1,207 @@
+@mixin opacity($opacity) {
+  $alpha : $opacity * 100;
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$alpha})";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=$alpha);
+
+  /* Netscape */
+  -moz-opacity: $opacity;
+
+  /* Safari 1.x */
+  -khtml-opacity: $opacity;
+
+  /* Good browsers */
+  opacity: $opacity;
+}
+@mixin box-shadow--v($arguments...) {
+  -moz-box-shadow: $arguments;
+  -webkit-box-shadow: $arguments;
+  box-shadow: $arguments;
+}
+@mixin box-shadow($color,$offset-x : 3px,$offset-y : 3px,$blur-radius : 4px,$spread-radius : 0px) {
+  -moz-box-shadow: $offset-x $offset-y $blur-radius $color;
+  -webkit-box-shadow: $offset-x $offset-y $blur-radius $color;
+  box-shadow: $offset-x $offset-y $blur-radius $color;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=#{$blur-radius}, Direction=135, Color='#{$color}')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=$blur-radius, Direction=135, Color='#{$color}');
+
+}
+@mixin border($color,$size:1px,$type : solid) {
+  border: $size $type $color;
+}
+@mixin border--v($arguments...) {
+  border: $arguments;
+}
+@mixin hr-color($color) {
+  background-color: $color;
+  color : $color;
+  border-color: $color;
+}
+@mixin no-shadow() {
+  -webkit-appearance: none;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+@mixin rounded-corners($value : 50%) {
+  border-radius: $value;
+}
+
+@mixin transition-properties($arguments...) {
+  -webkit-transition: $arguments;
+  -moz-transition: $arguments;
+  -o-transition: $arguments;
+  transition: $arguments;
+}
+
+@mixin transform-rotate($degree) {
+  -webkit-transform: rotate($degree);
+  -moz-transform: rotate($degree);
+  -ms-transform: rotate($degree);
+  -o-transform: rotate($degree);
+  transform: rotate($degree);
+}
+
+@mixin transform-scale($value) {
+  -webkit-transform: scale($value);
+  -moz-transform: scale($value);
+  -ms-transform: scale($value);
+  -o-transform: scale($value);
+  transform: scale($value);
+}
+
+@mixin transform($arguments...) {
+  -webkit-transform: $arguments;
+  -moz-transform: $arguments;
+  -ms-transform: $arguments;
+  -o-transform: $arguments;
+  transform: $arguments;
+}
+
+@mixin border-radius ($radius : 5px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin backgroundSizeCover() {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+@function px-to-em($target, $context: $font-size--root-px) {
+  @return (strip-units($target) / strip-units($context)) * 1em;
+}
+
+@function px-to-em-coeff($target,$coefficient, $context: $font-size--root-px) {
+  @return (strip-units($target) / (strip-units($coefficient) * strip-units($context))) * 1em;
+}
+
+@function px-to-rem($target, $context: $font-size--root-rem-px) {
+  @return ($target / $context) * 1rem;
+}
+
+@function to-em($value) {
+  @return $value * 1em;
+}
+
+@function font-size-to-root-proportion($target,$context : $font-size--root-value) {
+  @return $target/ $context;
+}
+@function font-size-px-to-em-proportion($target,$context-em : px-to-em($font-size--root)) {
+  @return strip-units($target)/ strip-units($context-em * $font-size--root-px);
+}
+$default-breakpoints--desktop-first: (
+        'small-phones' : 320px,
+        'phones' : 480px,
+        'large-phones' : 560px,
+        'small-tablets' : 600px,
+        'tablets' : 768px,
+        'large-tablets' : 800px,
+        'desktops' : 992px,
+        'widescreens' : 1200px
+);
+$default-breakpoints--mobile-first: (
+        'small-phones' : 320px,
+        'phones' : 480px,
+        'large-phones' : 560px,
+        'small-tablets' : 600px,
+        'tablets' : 768px,
+        'large-tablets' : 800px,
+        'desktops' : 992px,
+        'widescreens' : 1200px
+);
+@mixin respond-to-less-than($breakpoint-name,$breakpoints:$default-breakpoints--desktop-first) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints, $breakpoint-name);
+
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media only screen and (max-width: $value) {
+      @content;
+    }
+  }
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint-name}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin respond-to-greater-than($breakpoint-name,$breakpoints:$default-breakpoints--mobile-first) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints, $breakpoint-name);
+
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media only screen and (min-width: $value) {
+      @content;
+    }
+  }
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint-name}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+@mixin respond-to-px($breakpoint-value) {
+  @if $breakpoint-value != null {
+    // Prints a media query based on the value
+    @media only screen and (max-width: $breakpoint-value) {
+      @content;
+    }
+  }
+  @else {
+    @warn "Value cannot be null";
+  }
+}
+@mixin respond-to-mobile-first($breakpoint-name,$breakpoints:$default-breakpoints) {
+  // Retrieves the value from the key
+  $value: map-get($breakpoints, $breakpoint-name);
+
+  // If the key exists in the map
+  @if $value != null {
+    // Prints a media query based on the value
+    @media only screen and (min-width: $value) {
+      @content;
+    }
+  }
+
+    // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint-name}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
