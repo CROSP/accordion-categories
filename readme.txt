@@ -12,7 +12,7 @@ Accordion Categories is a Wordpress widget that allows you to display categories
 
 == Description ==
 
-Accordion Categories allows you to show categories menu in a sidebar. Each widget can be configured according to your needs.
+Accordion Categories allows you to show categories menu in a sidebar. Every instance of the widget can be configured according to your needs.
 This widget helps visitors of your site to navigate through categories easily. Auto overflow style generation is supported.
 
 = Main Features =
