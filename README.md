@@ -1,4 +1,4 @@
-Accordion Categories is a widget that allows you to display categories in hierachical order
+Accordion Categories is a Wordpress widget that allows you to display categories in hierachical order
 
 Description
 ------------
