@@ -28,13 +28,23 @@ Installation
 Screenshots
 -----------
 
-![Widget appearance](./screenshots/screen1.png)
+Widget appearance
+
+![Widget appearance](./screenshots/screen1.png)<!-- .element height="20px" width="100px" -->
+
+Widget configuration
 
 ![Widget configuration](./screenshots/screen2.png)
 
+Show empty categories
+
 ![Show empty categories](./screenshots/screen3.png)
 
+Autoverflow padding
+
 ![Autoverflow padding](./screenshots/screen4.png)
+
+With category icons
 
 ![With category icons](./screenshots/screen5.png)
 
