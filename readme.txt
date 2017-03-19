@@ -1,5 +1,6 @@
 === Accordion Categories ===
 Contributors: crosp
+Author: Alexander Molochko
 Donate link: https://crosp.net/
 Tags: category, categories, accordion, drop-down, menu, widget, categories tree, categories hierarchy, category widget, sidebar
 Requires at least: 3.2
@@ -7,7 +8,7 @@ Tested up to: 4.7.3
 Stable tag: 1.0
 License: GPLv2 or later
 
-Accordion Categories is a Wordpress widget that allows you to display categories in hierachical order
+Accordion Categories is a Wordpress widget that allows you to display categories in the hierachical order
 
 == Description ==
 
@@ -34,6 +35,12 @@ You can find the plugin source code on github [Accordion Categories](https://git
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Use `Accordion Categories Menu` widget in any registered sidebar `Appearance->Widgets`
 
+== Frequently Asked Questions ==
+
+= Why doesn't the feature XX work ? =
+
+If you have found a bug, or the plugin doesn't work correctly, please feel free to contact me.
+I will do my best to fix an issue.
 
 == Screenshots ==
 

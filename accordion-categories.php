@@ -2,8 +2,8 @@
 /*
 Plugin Name: Accordion Categories
 Version: 1.0
-Plugin URI: http://crosp.net
-Description: This plugin provides widget for displaying categories hierarchy, like default, but with collapsing feature. You can also specify settings for displaying categories directly in widget. This widget was created to simplify displaying category hierarchy in sidebar
+Plugin URI: https://github.com/CROSP/accordion-categories
+Description: Accordion Categories is a Wordpress widget that allows you to display categories in the hierachical order
 Author: Alexander Molochko
 Author URI: http://crosp.net/about
 */
