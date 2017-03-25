@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Accordion Categories
-Version: 1.0
+Version: 1.1
 Plugin URI: https://github.com/CROSP/accordion-categories
 Description: Accordion Categories is a Wordpress widget that allows you to display categories in the hierachical order
 Author: Alexander Molochko
