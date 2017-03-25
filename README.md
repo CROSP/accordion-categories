@@ -27,12 +27,12 @@ Installation
 Frequently Asked Questions
 --------------------------
 
-## Why doesn't the feature XX work ?
+#### Why doesn't the feature XX work ?
 
 If you have found a bug, or the plugin doesn't work correctly, please feel free to contact me.
 I will do my best to fix an issue.
 
-## How to use category icons ? 
+#### How to use category icons ? 
 
 If you need to have an icon associated with a category I'd suggest you to add a custom category field.
 I have provided an example of adding a custom category field. You can find it in the `example/category-icon` folder.
