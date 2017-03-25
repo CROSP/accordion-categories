@@ -24,6 +24,7 @@ $transition-duration: all 0.5s;
   position: relative;
   display: none;
   width: 100%;
+  margin-left: 0;
   &.is-root {
     padding-left: 0;
     display: block;

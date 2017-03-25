@@ -5,6 +5,7 @@
   position: relative;
   display: none;
   width: 100%;
+  margin-left: 0;
   /* Item submodule */
   /* Level modifiers */
   /*  &--level {
