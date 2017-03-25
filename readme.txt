@@ -64,7 +64,7 @@ The name of the filter to hook - `accordion_category_icon`.
 
 == Changelog ==
 
-= 0.1.2=
+= 0.1.2 =
 * Release Date - 25 March 2017 *
 * Fix the margin style bug caused by the default css file
 
