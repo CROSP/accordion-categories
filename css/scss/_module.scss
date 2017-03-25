@@ -16,7 +16,6 @@ $main-color: $color-secondary;
 $transition-duration: all 0.5s;
 .accordion-menu-widget {
   width: 100%;
-  // background: $color-primary;
 }
 
 .accordion-list {
@@ -47,7 +46,7 @@ $transition-duration: all 0.5s;
     }
 
     &__toggle-icon {
-      $icon-size : 18px;
+      $icon-size: 18px;
       height: px-to-em($icon-size);
       width: px-to-em($icon-size);
       display: inline-block;
