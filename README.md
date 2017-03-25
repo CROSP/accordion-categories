@@ -40,7 +40,6 @@ Or you can use your own implementation. The plugin provides a specific filter fo
 The name of the filter to hook - `accordion_category_icon`.
 
 
-
 Screenshots
 -----------
 
