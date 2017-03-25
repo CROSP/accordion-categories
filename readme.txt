@@ -5,7 +5,7 @@ Donate link: https://crosp.net/
 Tags: category, categories, responsive, accordion, drop-down, menu, widget, categories tree, categories hierarchy, category widget, sidebar
 Requires at least: 3.2
 Tested up to: 4.7.3
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 
 Accordion Categories is a Wordpress widget that allows you to display categories in the hierachical order
@@ -63,6 +63,10 @@ The name of the filter to hook - `accordion_category_icon`.
 5. With category icons.
 
 == Changelog ==
+
+= 0.1.2=
+* Release Date - 25 March 2017 *
+* Fix the margin style bug caused by the default css file
 
 = 0.1.0 =
 * Release Date - 19 March 2017 *
